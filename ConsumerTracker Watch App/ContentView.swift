@@ -19,7 +19,7 @@ struct ContentView: View {
                 Image(systemName: "drop.fill")
                     .font(.system(size:25))
                     .foregroundStyle(.blue)
-                Text("\(model.consumerDetails.drinkCount) mL drank today")
+                Text("\(model.consumerDetails.drinkCount) mL drank todayy")
                     .font(.title3)
                 HStack {
                     Button("-") {
