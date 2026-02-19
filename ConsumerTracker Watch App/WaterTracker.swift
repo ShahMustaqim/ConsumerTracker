@@ -16,7 +16,7 @@ struct WaterTracker: View {
                 model.consumerDetails.drinkTarget += 500
                 model.save()
             }
-            Text(String(model.consumerDetails.drinkTarget)).font(Font.title2)
+            Text("\(model.consumerDetails.drinkTarget) mL").font(Font.title2)
             Button("-"){
                 model.consumerDetails.drinkTarget -= 500
                 model.save()
