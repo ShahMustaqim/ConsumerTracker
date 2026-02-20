@@ -57,14 +57,15 @@ struct ConsumerTrackerWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
-                Text("Time:")
-                Text(entry.date, style: .time)
+                Image(systemName: "drop.fill").foregroundStyle(.blue)
+                Text("\(entry.drinkCount)mL")
             }
-        
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+            HStack {
+                Image(systemName: "fork.knife").foregroundStyle(.gray)
+                Text("\(entry.calorieCount)kcal")
+            }
         }
     }
 }
