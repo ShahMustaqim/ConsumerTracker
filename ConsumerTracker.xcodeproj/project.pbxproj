@@ -82,6 +82,7 @@
 		013DFD592F4742F900F9F072 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		013DFD5B2F4742F900F9F072 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		013DFD712F474B0600F9F072 /* ConsumerTrackerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ConsumerTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01BBD1C42F48A3E800461B21 /* ConsumerTrackerWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConsumerTrackerWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -92,11 +93,21 @@
 			);
 			target = 013DFD702F474B0600F9F072 /* ConsumerTrackerWidgetExtension */;
 		};
+		01BBD1C22F48A0B700461B21 /* Exceptions for "ConsumerTracker Watch App" folder in "ConsumerTrackerWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataModel.swift,
+			);
+			target = 013DFD702F474B0600F9F072 /* ConsumerTrackerWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		01321F492F435C9E006D3308 /* ConsumerTracker Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				01BBD1C22F48A0B700461B21 /* Exceptions for "ConsumerTracker Watch App" folder in "ConsumerTrackerWidgetExtension" target */,
+			);
 			path = "ConsumerTracker Watch App";
 			sourceTree = "<group>";
 		};
@@ -140,6 +151,7 @@
 		01321F382F435C9D006D3308 = {
 			isa = PBXGroup;
 			children = (
+				01BBD1C42F48A3E800461B21 /* ConsumerTrackerWidgetExtension.entitlements */,
 				01321F492F435C9E006D3308 /* ConsumerTracker Watch App */,
 				013DFD742F474B0600F9F072 /* ConsumerTrackerWidget */,
 				013DFD582F4742F900F9F072 /* Frameworks */,
@@ -524,8 +536,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ConsumerTracker Watch App/ConsumerTracker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ConsumerTracker;
@@ -556,8 +570,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ConsumerTracker Watch App/ConsumerTracker Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ConsumerTracker;
@@ -720,8 +736,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ConsumerTrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConsumerTrackerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ConsumerTrackerWidget;
@@ -752,8 +770,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ConsumerTrackerWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConsumerTrackerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ConsumerTrackerWidget;

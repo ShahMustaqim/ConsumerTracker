@@ -21,7 +21,7 @@ class DataModel: ObservableObject {
         consumerDetails.lastSavedDate = Date.now
         do {
             let data = try JSONEncoder().encode(consumerDetails)
-            let url = URL.documentsDirectory.appending(path:"ConsumerTracker")
+            let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier:"group.com.shah.ConsumerTracker")!.appendingPathComponent("ConsumerTracker.json")
             try data.write(to:url, options:[.atomic, .completeFileProtection])
             WidgetCenter.shared.reloadTimelines(ofKind: "ConsumerTracker")
         } catch {
@@ -31,7 +31,7 @@ class DataModel: ObservableObject {
     
     func load () {
         do {
-            let url = URL.documentsDirectory.appending(path:"ConsumerTracker")
+            let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier:"group.com.shah.ConsumerTracker")!.appendingPathComponent("ConsumerTracker.json")
             let data = try Data(contentsOf: url)
             var loadedDetails = try JSONDecoder().decode(ConsumerDetails.self, from:data)
             
